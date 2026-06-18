@@ -69,7 +69,7 @@ COLLECTION_NAME = "smart_factory"
 # LLM 초기화 (전역) - Google Generative AI
 # =====================================
 llm = ChatGoogleGenerativeAI(
-    model="gemini-1.5-flash",
+    model="gemini-2.0-flash",
     google_api_key=st.secrets["GOOGLE_API_KEY"],
     temperature=0,
 )
