@@ -23,7 +23,8 @@ import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
-from langchain_ollama import ChatOllama
+import streamlit as st
+from langchain_google_genai import ChatGoogleGenerativeAI
 import numpy as np
 
 # =====================================
@@ -65,14 +66,12 @@ EMBEDDING_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 COLLECTION_NAME = "smart_factory"
 
 # =====================================
-# LLM 초기화 (전역) - Ollama Qwen3
+# LLM 초기화 (전역) - Google Generative AI
 # =====================================
-llm = ChatOllama(
-    model="qwen3:8b",
-    base_url="http://localhost:11434",
+llm = ChatGoogleGenerativeAI(
+    model="gemini-1.5-flash",
+    google_api_key=st.secrets["GOOGLE_API_KEY"],
     temperature=0,
-    num_ctx=4096,
-    extra_body={"think": False},
 )
 # =====================================
 # LangChain Document

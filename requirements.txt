@@ -4,6 +4,7 @@ langchain-community
 langchain-core
 langchain-huggingface
 langchain-ollama
+langchain-google-genai
 
 sentence-transformers
 transformers
