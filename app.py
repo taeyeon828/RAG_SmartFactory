@@ -1,6 +1,9 @@
 # app.py
-from main import retrieve_context, ask_rag   # ← main.py RAG 연결
- 
+from main import retrieve_context, ask_rag, run_preprocess, CHROMA_DIR   # ← main.py RAG 연결
+
+if not CHROMA_DIR.exists() or not any(CHROMA_DIR.iterdir()):
+    run_preprocess()
+    
 import streamlit as st
 import pandas as pd
 import altair as alt

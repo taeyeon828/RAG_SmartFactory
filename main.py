@@ -43,7 +43,7 @@ CHUNKS_JSONL_PATH    = PROCESSED_CHUNKS_DIR / "chunks.jsonl"
 REPORT_DIR           = PROCESSED_DIR / "report"
 QUALITY_REPORT_PATH  = REPORT_DIR / "quality_report.json"
 
-CHROMA_DIR = Path("C:/RAG_DB/faiss_db")
+CHROMA_DIR = BASE_DIR / "data" / "vectorstore" / "faiss_db"
 
 # =====================================
 # 청킹 파라미터
