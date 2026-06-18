@@ -311,7 +311,7 @@ def run_preprocess():
     print("\n[1/3] 데이터 로딩 중...")
     pdf_docs   = _preprocess_pdfs()
     csv_docs   = _load_csvs()
-    image_docs = _load_images()
+    image_docs = [] # Streamlit Cloud 배포에서는 EasyOCR 생략
 
     print(f"  PDF chunks : {len(pdf_docs)}")
     print(f"  CSV docs   : {len(csv_docs)}")
