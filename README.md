@@ -61,7 +61,7 @@ project/
 python main.py --preprocess
 ```
 
-이 명령은 PDF, CSV, 이미지 데이터를 불러온 뒤 청킹 및 임베딩을 수행하고 FAISS 벡터 DB를 생성한다.
+이 명령은 PDF, CSV 데이터를 불러온 뒤 청킹 및 임베딩을 수행하고 벡터 DB를 생성한다.
 
 ### 5.2 평소 앱 실행
 
